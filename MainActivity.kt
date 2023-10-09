@@ -51,7 +51,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             val navController = rememberNavController()
             LabaTheme {
-                NavHost(navController = navController, startDestination = "home_screen")
+                NavHost(navController = navController, startDestination = "home_screen")     //навигация
                 {
                     composable("home_screen") {
                         Home_Screen {
@@ -143,7 +143,7 @@ class MainActivity : ComponentActivity() {
                     Icon(Icons.Default.CheckCircle, contentDescription = "Back")
                 }
             }) { innerPadding ->
-            if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT)
+            if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) //адаптивная верстка (для вертикальной версии)
                 Column(
                     modifier = Modifier
                         .background(getThemeColor().background)
@@ -176,7 +176,7 @@ class MainActivity : ComponentActivity() {
                     )
                     Spacer(modifier = Modifier.fillMaxHeight())
                 }
-            else
+            else                                                                           //адаптивная верстка (для вертикальной версии)
                 Row (
                     modifier = Modifier
                         .background(getThemeColor().background)
