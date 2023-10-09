@@ -176,7 +176,7 @@ class MainActivity : ComponentActivity() {
                     )
                     Spacer(modifier = Modifier.fillMaxHeight())
                 }
-            else                                                                           //адаптивная верстка (для вертикальной версии)
+            else                                                                           //адаптивная верстка (для горизонтальной версии)
                 Row (
                     modifier = Modifier
                         .background(getThemeColor().background)
